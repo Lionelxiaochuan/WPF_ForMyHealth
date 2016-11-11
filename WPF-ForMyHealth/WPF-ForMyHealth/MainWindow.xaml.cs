@@ -62,23 +62,7 @@ namespace WPF_ForMyHealth
             this.Show();
         }
 
-        //private void Window_Closed(object sender, EventArgs e)
-        //{
-        //    //判断 sender 是谁？  如果是window？则hide 如果是notify则close
-        //    if (sender.Equals(notifyIcon))
-        //    {
-        //        this.Close();
-        //    }
-        //    else if (sender.Equals(this))
-        //    {
-        //        this.Hide();
-        //    }
-        //}
-
-        //private void button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    this.Hide();
-        //}
+       
 
         protected override void OnClosed(EventArgs e)
         {
@@ -92,13 +76,5 @@ namespace WPF_ForMyHealth
             this.Hide();
         }
 
-
-        //private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        //{
-        //    if (sender.Equals(this))
-        //    {
-        //        this.Hide();
-        //    }
-        //}
     }
 }
