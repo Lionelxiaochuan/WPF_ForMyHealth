@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Drawing;
+using System.ComponentModel;
 
 namespace WPF_ForMyHealth
 {
@@ -74,10 +75,23 @@ namespace WPF_ForMyHealth
         //    }
         //}
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        //private void button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Hide();
+        //}
+
+        protected override void OnClosed(EventArgs e)
         {
+            //base.OnClosed(e);
             this.Hide();
         }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+        }
+
 
         //private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         //{
